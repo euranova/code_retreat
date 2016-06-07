@@ -1,8 +1,9 @@
-# Javascript Scaffold for Code Retreat
+# Clojure Scaffold for Code Retreat
 
-## Install Leiningen
+## Install clojure tools
 
-[Follow the instructions](http://leiningen.org/#install).
+* Java: make sure you have a JDK installed on your machine!
+* Leiningen: [Follow the instructions](http://leiningen.org/#install).
 
 ## Install the dependencies
 
@@ -15,6 +16,13 @@ lein deps
 ```Bash
 lein test
 ```
+
+## Run the app
+
+```Bash
+lein run
+```
+
 
 ## Hierarchy of directories
 
