@@ -1,0 +1,6 @@
+[package]
+name = "scaffold"
+version = "0.1.0"
+authors = ["EURA NOVA S.A. <info@euranova.eu>"]
+
+[dependencies]
