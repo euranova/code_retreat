@@ -6,3 +6,4 @@ to facilitate [code retreat](http://coderetreat.org).
 ## Contributors
 
 * [Toch](https://github.com/toch)
+* [jbruggem](https://github.com/jbruggem)
