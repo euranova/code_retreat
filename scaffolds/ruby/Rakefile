@@ -1,0 +1,11 @@
+require "rake"
+require "rake/testtask"
+
+Rake::TestTask.new do |task|
+  task.pattern =  "spec/**/*_spec.rb"
+  task.warning =  false
+  task.libs    << "spec"
+end
+
+task default: :test
+task spec: :test
