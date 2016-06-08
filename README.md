@@ -5,7 +5,7 @@ to facilitate [code retreat](http://coderetreat.org).
 
 ## Scaffolds
 
-When you're not comfortable with a language, it migth take you a lot of time
+When you're not comfortable with a language, it might take you a lot of time
 to scaffold the minimum and start right away. This is a pity!
 
 We provide a scaffold allowing you to start to write code and practice Test
