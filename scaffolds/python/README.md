@@ -6,7 +6,7 @@ The easiest option is to install the [Anaconda](https://www.continuum.io/downloa
 
 ## Run the tests
 
-From `python/src/`, run:
+From `src/`, run:
 
 ```Bash
 py.test -v
@@ -21,4 +21,4 @@ python my_app.py
 ## Hierarchy of directories
 
 * `src`: the source code, including a module `my_module.py` and a script `my_app.py`.
-* `src\test`: the tests
+* `src/test`: the tests
