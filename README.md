@@ -14,11 +14,12 @@ Driven Development quickly for the following programming languages:
 * [Bash](scaffolds/bash/README.md)
 * [Clojure](scaffolds/clojure/README.md)
 * [JavaScript](scaffolds/javascript/README.md)
+* [Python](scaffolds/python/README.md)
 * [Ruby](scaffolds/ruby/README.md)
 * [Rust](scaffolds/rust/README.md)
-* [Python](scaffolds/python/README.md)
 
 ## Contributors
 
 * [Toch](https://github.com/toch)
 * [jbruggem](https://github.com/jbruggem)
+* [albar0n](https://github.com/albar0n)
