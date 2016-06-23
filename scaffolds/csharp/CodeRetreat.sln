@@ -14,7 +14,7 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CodeRetreat", "src\CodeRetr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3956265F-9187-44D2-A7F4-BCF2495D5A4C}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CodeRetreat.Tests", "CodeRetreat.Tests\CodeRetreat.Tests.xproj", "{6703EF88-5193-4897-AC00-724434752E48}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CodeRetreat.Tests", "test\CodeRetreat.Tests\CodeRetreat.Tests.xproj", "{6703EF88-5193-4897-AC00-724434752E48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

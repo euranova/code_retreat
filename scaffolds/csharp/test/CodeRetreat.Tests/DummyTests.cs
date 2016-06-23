@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace CodeRetreat.Tests
+﻿namespace CodeRetreat.Tests
 {
 
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
     using NUnit.Framework;
 
     [TestFixture]
@@ -24,4 +23,5 @@ namespace CodeRetreat.Tests
         }
 
     }
+
 }
