@@ -9,8 +9,11 @@ with all the tools you need:
 docker build -t csharp-code-retreat .
 ```
 
-The only downside is that you need to run the .NET CLI through Docker. 
-//To make it easy, we wrote a script `gradle.sh` wrapping the `docker` command and acting as the .NET CLI
+The only downside is that you need to run the .NET CLI through Docker.
+
+```Bash
+docker run -it csharp-code-retreat
+```
 
 ## Run the tests
 
