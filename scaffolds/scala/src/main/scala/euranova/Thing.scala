@@ -1,11 +1,11 @@
 package euranova
 
-class TheThing{
+class Thing {
 
   val isReady = true
 
-  def theProp: String = {
+  def prop: String = {
     "propval"
   }
-  
+
 }
