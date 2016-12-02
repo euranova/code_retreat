@@ -1,23 +1,27 @@
 # C# Scaffold for Code Retreat
 
-## Install the .NET CLI and .NET Core
+## Start the .NET CLI and .NET Core
 
-There are several options. The easiest way is to work with a docker image ready
-with all the tools you need:
+Run a bash shell inside the docker container :
 
 ```Bash
-docker build -t csharp-code-retreat .
+./docker.sh
 ```
+## Run the code
 
-The only downside is that you need to run the .NET CLI through Docker.
+Once inside the docker container, you can do :
 
 ```Bash
-docker run -it csharp-code-retreat
+cd src/CodeRetreat
+dotnet restore
+dotnet run
 ```
 
 ## Run the tests
 
 ```Bash
+cd test/CodeRetreat.Tests
+dotnet restore
 dotnet test
 ```
 

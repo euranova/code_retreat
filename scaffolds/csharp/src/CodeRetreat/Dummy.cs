@@ -1,19 +1,20 @@
 ﻿namespace CodeRetreat
 {
+  using System;
 
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
+  public class Dummy
+  {
 
-    public class Dummy
+    public string Hello()
     {
-
-        public string Hello()
-        {
-            return "Hello World!";
-        }
-
+      return "Hello World!";
     }
+
+    public static void Main(string[] args)
+    {
+      Console.WriteLine(new Dummy().Hello());
+    }
+
+  }
 
 }
