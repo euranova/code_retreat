@@ -1,2 +1,2 @@
 # note: add --priviledged if you wish to run the repl
-docker run -it --rm -w /code -v $PWD:/code swiftdocker/swift $@
+docker run -it --rm -w /code -v $PWD:/code swiftdocker/swift:3.0.1 $@
