@@ -7,10 +7,16 @@ Workflow when using this scaffold:
 
 ## Start the .NET CLI and .NET Core
 
-Run a bash shell inside the docker container :
+Under Linux, run a bash shell inside the docker container from the terminal:
 
 ```Bash
 ./docker.sh
+```
+
+Or, under Windows, run a bash shell inside the docker container from PowerShell:
+
+```
+./docker.ps1
 ```
 
 This will start an interactive Docker container with the .NET Core SDK. A volume to the current folder is mounted into 
