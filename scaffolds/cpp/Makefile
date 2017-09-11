@@ -1,4 +1,3 @@
-
 cxxtestgen := cxxtestgen
 
 src = src

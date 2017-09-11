@@ -1,4 +1,3 @@
-
 #include <cxxtest/TestSuite.h>
 
 #include "module.h"

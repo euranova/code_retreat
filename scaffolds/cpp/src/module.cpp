@@ -1,4 +1,3 @@
-
 #include "module.h"
 
 bool Module::returnTrue()
