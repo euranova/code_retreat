@@ -2,8 +2,9 @@
 
 Workflow when using this scaffold:
 1. Start the Docker container with the tools needed to build, run and test your solution (see below).
-2. Edit your code using you favorite editor.
-3. Run the unit tests inside the container using ``dotnet test``.
+2. Edit your code using you favorite code editor.
+3. Run the unit tests inside the container using ``dotnet test .\CodeRetreat.Tests\``.
+4. (optional) Run the application inside the container using ``dotnet run --project .\CodeRetreat.Console\``.
 
 ## Start the .NET CLI and .NET Core
 
@@ -25,12 +26,21 @@ this container (in '/app').
 ## Run the tests
 
 ```Bash
-dotnet test
+dotnet test .\CodeRetreat.Tests\
+```
+
+The results of the tests are reported in the standard output only.
+
+## Run the application
+
+```Bash
+dotnet run --project .\CodeRetreat.Console\
 ```
 
 The results of the tests are reported in the standard output only.
 
 ## Hierarchy of directories
 
+* `CodeRetreat.Console`: console project that runs the model
 * `CodeRetreat.Model`: source code project
 * `CodeRetreat.Tests`: test project
