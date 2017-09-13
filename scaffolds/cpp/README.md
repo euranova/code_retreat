@@ -6,11 +6,15 @@ installing `cxxtest` with the package manager is also an option.
 
 ## Start docker image
 
-Start a bash prompt in the docker image, with the code mounted as a volume:
+Start a bash prompt in the docker image, with the code mounted as a volume,
+using the provided script:
 
 ```bash
-docker run --user ${UID} -it -v ${PWD}:/app euranova/cxxtest
+./docker.sh
 ```
+
+See https://docs.docker.com/engine/installation for instructions on how to
+install docker.
 
 ## Run the tests
 
