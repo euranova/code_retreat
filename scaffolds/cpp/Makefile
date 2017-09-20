@@ -16,7 +16,7 @@ test-runner-exe := $(build)/test-runner
 
 .PHONY: all clean test
 
-all: test
+all: $(test-runner-exe)
 
 $(test-runner-src): $(test-file)
 	mkdir -p $(build)
