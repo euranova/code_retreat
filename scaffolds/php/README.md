@@ -1,0 +1,46 @@
+# PHP Scaffold for Code Retreat
+
+This scaffold comes with severals tools that work with docker under the hood.
+- `php`: a php 7.1 executable
+- `phpspec`: a php test framework
+- `composer`: a php dependencies manager
+
+Run
+```bash
+docker.sh [command]
+```
+to use a tool. 
+
+## Install or update dependencies
+
+The first time you use this scaffold you need to install all dependencies. This is done by using the php dependencies manager: [composer](https://getcomposer.org/). The following command should install all the dependencies in the `/vendor` directory.
+```bash
+./docker.sh composer install
+```
+
+Sometimes you need to update your dependencies or add a new one. As an example, we will add a second php unit test framework called: _phpunit_.
+```bash
+./docker.sh composer require phpunit/phpunit ^6.2
+```
+
+That's it! You can now use your favorite tools!
+
+## Run the tests
+
+[phpspec](http://www.phpspec.net/en/stable/manual/introduction.html) is a tool which can help you write clean and working PHP code using behaviour driven development. Run the following command to execute tests:
+
+```bash
+./docker.sh phpspec run
+```
+
+phpspec provides a tool to help you writing _specification_. You can use it with the `desc` subcommand:
+```bash
+./docker.sh phpspec desc [MyNewNamespace]/[MyNewClass]
+```
+
+## Run the app
+
+
+```bash
+./docker.sh php app.php
+```
