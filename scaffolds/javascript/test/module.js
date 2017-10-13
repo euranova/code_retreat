@@ -1,4 +1,4 @@
-const should = require('should');
+require('should');
 
 const Module = require('../src/module');
 
