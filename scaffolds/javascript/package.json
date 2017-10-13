@@ -6,11 +6,13 @@
   "version": "0.0.1",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "eslint src/* test/*; mocha",
     "start": "node src/index.js"
   },
   "devDependencies": {
+    "eslint": "^4.8.0",
     "mocha": "^2.5.3",
     "should": "^9.0.0"
-  }
+  },
+  "dependencies": {}
 }

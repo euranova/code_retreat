@@ -1,1 +1,1 @@
-console.log("Not doing much !");
+console.log('Not doing much !');
