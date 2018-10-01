@@ -1,6 +1,6 @@
 {
     "require-dev": {
-        "phpspec/phpspec": "*"
+        "phpspec/phpspec": ">=5.0.2"
     },
     "autoload": {"psr-0": {"": "src"}},
     "prefer-stable": true,
