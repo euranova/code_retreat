@@ -10,4 +10,6 @@ RUN \
   apt-get install sbt && \
   sbt sbtVersion
 
+# (sbt sbtVersion will force the fetching of the right sbt jar needed)
+
 WORKDIR /root/project

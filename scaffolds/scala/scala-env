@@ -1,0 +1,20 @@
+#!/bin/bash
+
+cd $(dirname $0)
+
+ENABLE_TTY=${ENABLE_TTY:--t}
+IMAGE="code-retreat-scala-env"
+VERSION="1"
+TAG="$IMAGE:$VERSION"
+
+docker images | grep -q "$IMAGE[ ]*$VERSION" || docker build -t $TAG .
+
+mkdir -p docker-home && touch docker-home/empty_file || exit 1
+
+docker run --rm -i ${ENABLE_TTY} \
+  -u $(id -u):$(id -g) \
+  -v $(pwd)/docker-home:/tmp/home:rw \
+  -e _JAVA_OPTIONS=-Duser.home=/tmp/home \
+  -v $(pwd):/tmp/project:rw \
+  -w /tmp/project \
+  $TAG $@ 2> >(grep -v "Picked up _JAVA_OPTIONS:")

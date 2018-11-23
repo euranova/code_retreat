@@ -1,5 +1,9 @@
 # Javascript Scaffold for Code Retreat
 
+## Option 1: use docker wrapper scripts
+
+See `scripts/` folder.
+
 ## Install NodeJS
 
 There are several options. The recommended would be [NVM](https://github.com/creationix/nvm).
@@ -9,8 +13,8 @@ Their website provides [instructions to install nvm](https://github.com/creation
 Then fix your node version to a sensible one:
 
 ```Bash
-nvm install 6
-nvm use 6
+nvm install 8
+nvm use 8
 ```
 
 ## Install the dependencies

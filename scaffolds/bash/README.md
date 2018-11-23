@@ -1,5 +1,9 @@
 # Bash Scaffold for Code Retreat
 
+## Option 1: use docker wrapper scripts
+
+See `scripts/` folder.
+
 ## Install Test Framework Bats
 
 ```Bash
@@ -23,4 +27,3 @@ bats test
 * `bin`: the program
 * `lib`: source code
 * `test`: the tests
-

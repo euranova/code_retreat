@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd $(dirname $0)/..
+
+./node-env npm run test
+
+exit $?
