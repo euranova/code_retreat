@@ -1,5 +1,9 @@
 # Scala Scaffold for Code Retreat
 
+## Option 1: use docker wrapper scripts
+
+See `scripts/` folder.
+
 ## Install scala tools
 
 * Java: make sure you have a JDK installed on your machine!

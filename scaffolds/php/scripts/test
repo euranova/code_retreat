@@ -2,7 +2,7 @@
 
 cd $(dirname $0)/..
 
+./docker.sh composer install
 ./docker.sh phpspec run
 
 exit $?
-

@@ -9,7 +9,9 @@ Run
 ```bash
 ./docker.sh [command]
 ```
-to use a tool. 
+to use a tool.
+
+See `scripts/` for build/test scripts wrapper in docker.
 
 ## Install or update dependencies
 

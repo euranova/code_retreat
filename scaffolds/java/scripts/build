@@ -2,6 +2,6 @@
 
 cd $(dirname $0)/..
 
-./gradle.sh build -x test
+./gradle build -x test
 
 exit $?

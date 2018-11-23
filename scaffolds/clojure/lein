@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd $(dirname $0)
+
+mkdir -p docker-home && touch docker-home/empty_file || exit 1
+
+docker run --rm \
+  -u $(id -u):$(id -g) \
+  -v $(pwd):/tmp/project:rw \
+  -v $(pwd)/docker-home:/tmp/home:rw \
+  -w /tmp/project \
+  -e _JAVA_OPTIONS=-Duser.home=/tmp/home \
+  -e LEIN_HOME=/tmp/home \
+  clojure:lein-2.8.1-alpine lein $@ 2> >(grep -v "Picked up _JAVA_OPTIONS:")

@@ -1,5 +1,12 @@
 # C# Scaffold for Code Retreat
 
+
+## Option 1: use docker wrapper scripts
+
+See `scripts/` folder.
+
+## Otherwise: Workflow
+
 Workflow when using this scaffold:
 1. Start the Docker container with the tools needed to build, run and test your solution (see below).
 2. Edit your code using you favorite code editor.
@@ -20,7 +27,7 @@ Or, under Windows, run a bash shell inside the docker container from PowerShell:
 ./docker.ps1
 ```
 
-This will start an interactive Docker container with the .NET Core SDK. A volume to the current folder is mounted into 
+This will start an interactive Docker container with the .NET Core SDK. A volume to the current folder is mounted into
 this container (in '/app').
 
 ## Run the tests

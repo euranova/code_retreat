@@ -4,6 +4,10 @@ This code scaffold uses [CxxTest](http://cxxtest.com). We recommend using the
 docker image [euranova/cxxtest](https://github.com/euranova/docker-cxxtest), but
 installing `cxxtest` with the package manager is also an option.
 
+## Option 1: use docker wrapper scripts
+
+See `scripts/` folder.
+
 ## Start docker image
 
 Start a bash prompt in the docker image, with the code mounted as a volume,

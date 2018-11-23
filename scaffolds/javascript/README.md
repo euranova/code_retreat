@@ -1,5 +1,9 @@
 # Javascript Scaffold for Code Retreat
 
+## Option 1: use docker wrapper scripts
+
+See `scripts/` folder.
+
 ## Install NodeJS
 
 There are several options. The recommended would be [NVM](https://github.com/creationix/nvm).

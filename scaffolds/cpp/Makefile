@@ -25,6 +25,8 @@ $(test-runner-src): $(test-file)
 $(test-runner-exe): $(test-runner-src) $(src-files) $(header-files)
 	g++ -o $(test-runner-exe) -std=c++14 -I$(CXXTEST) -I$(include) $(test-runner-src) $(src-files)
 
+build: $(test-runner-exe)
+
 test: $(test-runner-exe)
 	$(test-runner-exe)
 

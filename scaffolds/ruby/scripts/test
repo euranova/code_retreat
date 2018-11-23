@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd $(dirname $0)/..
+
+./ruby-env "bundle install --binstubs /tmp/docker-home/bin/ && /tmp/docker-home/bin/rake"
+
+exit $?

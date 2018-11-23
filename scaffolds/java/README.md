@@ -1,5 +1,9 @@
 # Java Scaffold for Code Retreat
 
+## Option 1: use docker wrapper scripts
+
+See `scripts/` folder.
+
 ## Install Java and Gradle
 
 There are several options. The easiest way is to work with a docker image ready
