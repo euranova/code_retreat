@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Test and Commit or Revert, but build failures are OK
+
+# inspirations:
+# https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864
+# http://5.45.106.120/tcr/index.php/2018/11/15/71/#more-71
+
+
+./scripts/build && ./scripts/test && git add -A && git commit -a -m "tests pass, code works" || git reset --hard && git clean -f
