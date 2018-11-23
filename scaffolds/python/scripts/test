@@ -2,6 +2,6 @@
 
 cd $(dirname $0)/..
 
-py.test
+./python-env py.test
 
 exit $?

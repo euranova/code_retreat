@@ -2,6 +2,6 @@
 
 cd $(dirname $0)/..
 
-python -m compileall .
+./python-env python -m compileall .
 
 exit $?

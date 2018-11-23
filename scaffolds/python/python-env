@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd $(dirname $0)
+
+IMAGE="code-retreat-python-env"
+VERSION="1"
+TAG="$IMAGE:$VERSION"
+
+docker images | grep -q "$IMAGE[ ]*$VERSION" || docker build -t $TAG .
+
+docker run --rm -it \
+  -u $(id -u):$(id -g) \
+  -v $(pwd):/tmp/project:rw \
+  -w /tmp/project \
+  $TAG $@
