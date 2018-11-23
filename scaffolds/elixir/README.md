@@ -1,21 +1,16 @@
 # ElixirScaffold
 
-**TODO: Add description**
-
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `elixir_scaffold` to your list of dependencies in `mix.exs`:
+First, [install Elixir](https://elixir-lang.org/install.html#unix-and-unix-like).
 
-```elixir
-def deps do
-  [
-    {:elixir_scaffold, "~> 0.1.0"}
-  ]
-end
+Then:
+
+```bash
+# fetch dependencies
+mix deps.get
+# to compile
+mix compile
+# to test
+mix test
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/elixir_scaffold](https://hexdocs.pm/elixir_scaffold).
-
