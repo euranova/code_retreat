@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd $(dirname $0)/..
+
+./ts-node-env npm install
+
+exit $?
