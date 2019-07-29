@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cd $(dirname $0)/..
+
+# No easy way to compile the whole code but import the file will check syntax errors
+./julia -E 'include("src/MyModule.jl")' --color yes
+
+exit $?
