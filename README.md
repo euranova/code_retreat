@@ -28,14 +28,17 @@ Driven Development quickly for the following programming languages:
 * [Clojure](scaffolds/clojure/README.md)
 * [C++](scaffolds/cpp/README.md)
 * [C#](scaffolds/csharp/README.md)
+* [Elixir](scaffolds/elixir/README.md)
 * [Java](scaffolds/java/README.md)
 * [JavaScript](scaffolds/javascript/README.md)
+* [Julia](scaffolds/julia/README.md)
 * [PHP](scaffolds/php/README.md)
 * [Python](scaffolds/python/README.md)
 * [Ruby](scaffolds/ruby/README.md)
 * [Rust](scaffolds/rust/README.md)
 * [Scala](scaffolds/scala/README.md)
 * [Swift](scaffolds/swift/README.md)
+* [Typescript](scaffolds/typescript/README.md)
 
 ## Contributors
 

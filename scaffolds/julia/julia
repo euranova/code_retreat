@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cd $(dirname $0)
+ENABLE_TTY=${ENABLE_TTY:--t}
+
+docker run -i ${ENABLE_TTY} --rm \
+    -u $(id -u):$(id -g) \
+    -e HOME=/tmp \
+    -v $PWD/.julia:/tmp/.julia:rw \
+    -v $PWD:/usr/app:rw \
+    -w /usr/app \
+    julia:1.1 julia $@
