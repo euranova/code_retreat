@@ -28,13 +28,7 @@ sbt run
 If you have docker installed, you can do the following :
 
 ```bash
-docker build -t euranova/scala-sbt .
-```
-
-Then you can run sbt
-
-```bash
-docker run -it --rm -v $PWD:/root/project -w /root/project euranova/scala-sbt sbt [COMMAND]
+./scala-env sbt [COMMAND]
 ```
 
 `COMMAND` could be 'run' or 'test'. You can also skip that argument, which will bring you to a console
