@@ -34,11 +34,11 @@ public class AkkaQuickstart {
         // Send a String as a message for the actor
         stringActor.tell("test message", ActorRef.noSender());
 
-        // crate 2 more actors and send different types of messages
-        ActorRef ref2 = system.actorOf(Props.create(MyActor.class), "Int_actor");
-        ref2.tell(1, ActorRef.noSender());
-        ActorRef ref3 = system.actorOf(Props.create(MyActor.class), "Double_actor");
-        ref3.tell(1.0, ActorRef.noSender());
+        // Create 2 more actors and send different types of messages
+        ActorRef intActor = system.actorOf(Props.create(MyActor.class), "Int_actor");
+        intActor.tell(1, ActorRef.noSender());
+        ActorRef doubleActor = system.actorOf(Props.create(MyActor.class), "Double_actor");
+        doubleActor.tell(1.0, ActorRef.noSender());
 
         System.out.println("Actors are created.");
 
@@ -51,7 +51,6 @@ public class AkkaQuickstart {
             // Input to block the termination
             int s = System.in.read();
         } catch (IOException ignored){}
-
 
     }
 }
