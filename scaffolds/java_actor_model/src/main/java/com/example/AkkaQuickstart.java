@@ -25,16 +25,16 @@ class MyActor extends AbstractActor {
 
 
 public class AkkaQuickstart {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException{
 
         final ActorSystem system = ActorSystem.create("Hello_Akka");
 
         // Create an actor
-        ActorRef ref1 = system.actorOf(Props.create(MyActor.class), "String_actor");
-        // Send an object as a message for the actor
-        ref1.tell("test message", ActorRef.noSender());
+        ActorRef stringActor = system.actorOf(Props.create(MyActor.class), "String_actor");
+        // Send a String as a message for the actor
+        stringActor.tell("test message", ActorRef.noSender());
 
-        // crate 2 mroe actors and send different object as messages
+        // crate 2 more actors and send different types of messages
         ActorRef ref2 = system.actorOf(Props.create(MyActor.class), "Int_actor");
         ref2.tell(1, ActorRef.noSender());
         ActorRef ref3 = system.actorOf(Props.create(MyActor.class), "Double_actor");
@@ -42,16 +42,10 @@ public class AkkaQuickstart {
 
         System.out.println("Actors are created.");
 
-        try {
-            // wait till all the dummy actors are done processing the messages
-            Thread.sleep(10000);
-        } catch (Exception ignored) {
-        } finally {
-            // Clean
-            system.terminate();
-        }
-
-        System.out.println("system is terminated.");
+        // wait till all the dummy actors are done processing the messages
+        Thread.sleep(10000);
+        system.terminate();
+        System.out.println("The Actor system has been terminated.");
 
         try {
             // Input to block the termination
