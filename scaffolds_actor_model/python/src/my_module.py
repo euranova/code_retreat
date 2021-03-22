@@ -1,6 +1,6 @@
-from thespian.actors import *
+import thespian.actors as ta
 
-class MyClass(Actor):
+class MyClass(ta.Actor):
      def __init__(self, **kwargs):
           super().__init__(**kwargs)
           self.neighbour = None
@@ -15,12 +15,14 @@ class MyClass(Actor):
 
 
 if __name__ == "__main__":
-     actor_sys = ActorSystem()
+     actor_sys = ta.ActorSystem()
 
      #create actors
      actor1 = actor_sys.createActor(MyClass)
      actor2 = actor_sys.createActor(MyClass)
 
-     #init values   
-     ActorSystem().tell(actor1, {"msg_type": "receive_address", "address": actor2})
-     ActorSystem().tell(actor1, {"msg_type": "send_msg", "content": "hello world"})
+     #send address of actor2 to actor1  
+     actor_sys.tell(actor1, {"msg_type": "receive_address", "address": actor2})
+
+     #tell actor1 to send a message its neighbour
+     actor_sys.tell(actor1, {"msg_type": "send_msg", "content": "hello world"})
