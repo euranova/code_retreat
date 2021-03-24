@@ -9,3 +9,4 @@ def test_my_class_init():
 def test_actor_creation_raises_exception():
     with pytest.raises(TypeError):
         ta.ActorSystem().createActor()
+

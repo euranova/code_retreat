@@ -41,3 +41,4 @@ if __name__ == "__main__":
 
     #tell actor1 to send a message its neighbour
     actor_sys.tell(actor1, {"msg_type": "send_msg", "content": "hello world"})
+
