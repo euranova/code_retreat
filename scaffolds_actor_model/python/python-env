@@ -14,3 +14,4 @@ docker run --rm -i ${ENABLE_TTY} \
   -v $(pwd):/tmp/project:rw \
   -w /tmp/project \
   $TAG $@
+
