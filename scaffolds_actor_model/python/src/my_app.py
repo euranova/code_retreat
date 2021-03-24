@@ -1,4 +1,4 @@
-from my_module import my_function
+from my_module import MyClass
 
-answer = my_function(29, 13)
-print('The answer is {}'.format(answer))
+instance = MyClass()
+print(f"hello world, this is an object instance : {instance}")
