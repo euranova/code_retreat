@@ -1,27 +1,34 @@
 # Actor Model
 
-This is an example of actors in Elixir. Since actors are built in Erlang/Elixir,
-this is simply an example of a way to use them.
+This is an example of actors in Elixir. Since actors are built in
+Erlang/Elixir, this is simply an example of a way to use them.
 
-## Run
+It features an application that starts `ActorModel.Worker` GenServers.
+
+* Each Worker has a friend, with which it exchanges messages.
+* A Worker will randomly crash (on purpose) as an example of the
+  "Let it crash" philosophy.
+
+These Workers use `ActorModel.Person` as their state `struct`,
+and rely on that module to implement the greeting operations.
+
+Tests cover:
+* `Person`, to make sure mutations of the state are correct
+* `Worker`, to make sure that the life cycle of the actor works
+  as expected.
+
+
+## Run the tests
+
+```
+./mix test --no-start --trace
+```
+
+
+## Run the app
 
 ```
 ./mix run --no-halt
 ```
 
-## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `elixir` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:elixir, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/elixir](https://hexdocs.pm/elixir).

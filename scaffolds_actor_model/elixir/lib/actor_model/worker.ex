@@ -1,6 +1,7 @@
 defmodule ActorModel.Worker do
   use GenServer
   require Logger
+  alias ActorModel.Person
 
   def start_link(opts) do
     GenServer.start_link(__MODULE__, opts, name: opts |> Keyword.fetch!(:name))
@@ -19,22 +20,27 @@ defmodule ActorModel.Worker do
     name = opts |> Keyword.fetch!(:name)
     Logger.info("#{name} initializing.")
 
-    self() |> Process.send_after(:contact_friend, 100 + :rand.uniform(1000))
-
-    {:ok, %{friend_name: friend_name, name: name, count: 0}}
+    {:ok, %Person{friend_name: friend_name, name: name}, {:continue, :contact_friend}}
   end
 
-  def handle_info(:contact_friend, %{friend_name: friend_name, name: name, count: count} = state) do
-    Logger.info("#{name}: will send message #{count} to my friend.")
-    friend_name |> GenServer.whereis() |> Process.send({:hello, "Hello from #{name}"}, [])
-    {:noreply, %{state | count: count + 1}}
+  def handle_continue(:contact_friend, %Person{} = state), do: contact_friend(state)
+  def handle_info(:contact_friend, %Person{} = state), do: contact_friend(state)
+
+  def handle_info({:hello, message}, state) do
+    state = state |> Person.receive_greeting(message)
+    {:noreply, state, {:continue, :contact_friend}}
   end
 
-  def handle_info({:hello, message}, %{name: name, count: count} = state) do
-    sleep_time = 100 + count * 100 + (:rand.uniform((count + 1) * 100))
-    Logger.info("#{name}: Yay, I got a message: #{message}. Will sleep #{sleep_time}ms.")
-    Process.sleep(sleep_time)
-    self() |> Process.send(:contact_friend, [])
+  defp contact_friend(%Person{} = state) do
+    {message, state} = state |> Person.greet()
+
+    state.friend_name
+    |> GenServer.whereis()
+    |> case do
+      pid when is_pid(pid) -> pid |> Process.send({:hello, message}, [])
+      _ -> raise "Friend not found"
+    end
+
     {:noreply, state}
   end
 end
