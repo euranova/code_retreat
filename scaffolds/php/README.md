@@ -3,7 +3,7 @@
 This scaffold comes with severals tools that work with docker under the hood.
 - `php`: a PHP 7.1 executable
 - `phpspec`: a PHP test framework
-- `composer`: a PHPdependencies manager
+- `composer`: a PHP dependencies manager
 
 Run
 ```bash
