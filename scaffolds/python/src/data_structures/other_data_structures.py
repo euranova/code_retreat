@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from enum import Flag
+from typing import Set
 
 
 class State(Flag):
@@ -27,7 +28,6 @@ class Cell:
     right_neighbour: Cell
 
 
-
 @dataclass
 class Graph:
-    cells: set[Cell]
+    cells: Set[Cell]

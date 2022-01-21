@@ -2,6 +2,7 @@
 
 from dataclasses import dataclass
 from enum import Flag
+from typing import List
 
 
 class State(Flag):
@@ -17,4 +18,4 @@ class Coordinates:
 
 @dataclass
 class Grid:
-    cells: list[list[State]]
+    cells: List[List[State]]

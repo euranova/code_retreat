@@ -1,5 +1,7 @@
 """ Contains the original set of objects for the code. """
 
+from typing import List, Any, Optional
+
 from data_structures import data_structures as ds
 
 
@@ -7,15 +9,16 @@ class GameOfLifeGrid:
     """ A game-of-life grid with useful functions to access neighbours.
 
     :param grid: List[List[Any]]; the grid
-        The elements are cast to bool then State, True for alive and False for dead."""
-    def __init__(self, init_grid):
-        self.grid = ds.Grid([[ds.State(bool(elem)) for elem in row] for row in init_grid])
+        The elements are cast to bool then State, True for alive and False for dead.
+    """
+    def __init__(self, init_grid: List[List[Any]]):
+        self._grid = ds.Grid([[ds.State(bool(elem)) for elem in row] for row in init_grid])
 
-    def _is_off_grid(self, coordinates):
-        return not (0 <= coordinates.x < len(self.grid.cells) and
-                    0 <= coordinates.y < len(self.grid.cells[0]))
+    def _is_off_grid(self, coordinates: ds.Coordinates) -> bool:
+        return not (0 <= coordinates.x < len(self._grid.cells) and
+                    0 <= coordinates.y < len(self._grid.cells[0]))
 
-    def get_state(self, coordinates):
+    def get_state(self, coordinates: ds.Coordinates) -> Optional[ds.State]:
         """ Return the state of the cell at the given coordinates or None if it is off-grid.
 
         :param coordinates: Coordinates; coordinates for which we want the state
@@ -23,9 +26,9 @@ class GameOfLifeGrid:
         """
         if self._is_off_grid(coordinates):
             return None
-        return self.grid.cells[coordinates.x][coordinates.y]
+        return self._grid.cells[coordinates.x][coordinates.y]
 
-    def get_neighbours(self, coordinates):
+    def get_neighbours_states(self, coordinates: ds.Coordinates) -> List[ds.State]:
         """ Return the neighbours' states.
 
         :param coordinates: Coordinates; coordinate of the cell for which we need the neighours

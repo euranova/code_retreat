@@ -37,19 +37,19 @@ def test_gol_initialised_with_any_type_casts_objects_into_bool_then_state():
             grid.get_state(ds.Coordinates(13, 9)) is ds.State.DEAD)
 
 
-def test_get_neighbours_returns_its_8_neighbours_state_when_not_at_the_border(gol_grid):
+def test_get_neighbours_states_returns_its_8_neighbours_state_when_not_at_the_border(gol_grid):
     coordinates = ds.Coordinates(13, 8)
     expected = Counter({ds.State.ALIVE: 3, ds.State.DEAD:5})
-    assert Counter(gol_grid.get_neighbours(coordinates)) == expected
+    assert Counter(gol_grid.get_neighbours_states(coordinates)) == expected
 
 
-def test_get_neighbours_returns_its_3_neighbours_state_when_in_a_corner(gol_grid):
+def test_get_neighbours_states_returns_its_3_neighbours_state_when_in_a_corner(gol_grid):
     coordinates = ds.Coordinates(14, 9)
     expected = Counter({ds.State.ALIVE: 3})
-    assert Counter(gol_grid.get_neighbours(coordinates)) == expected
+    assert Counter(gol_grid.get_neighbours_states(coordinates)) == expected
 
 
-def test_get_neighbours_returns_its_5_neighbours_state_when_on_a_border(gol_grid):
+def test_get_neighbours_states_returns_its_5_neighbours_state_when_on_a_border(gol_grid):
     coordinates = ds.Coordinates(11, 9)
     expected = Counter({ds.State.ALIVE: 1, ds.State.DEAD: 4})
-    assert Counter(gol_grid.get_neighbours(coordinates)) == expected
+    assert Counter(gol_grid.get_neighbours_states(coordinates)) == expected
