@@ -18,9 +18,6 @@ class GameOfLifeGrid:
     def __init__(self, init_grid: List[List[Any]]):
         raise NotImplementedError  # TODO
 
-    def _is_off_grid(self, coordinates: ds.Coordinates) -> bool:
-        raise NotImplementedError  # TODO
-
     def get_state(self, coordinates: ds.Coordinates) -> Optional[ds.State]:
         """ Return the state of the cell at the given coordinates or None if it is off-grid.
 
