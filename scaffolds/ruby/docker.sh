@@ -2,7 +2,7 @@
 
 ENABLE_TTY=${ENABLE_TTY:--t}
 IMAGE="code-retreat-ruby-env"
-VERSION="1"
+VERSION="2"
 TAG="$IMAGE:$VERSION"
 
 docker images | grep -q "$IMAGE[ ]*$VERSION" || docker build -t $TAG .  || { echo "Failed to build image"; exit 1; }
