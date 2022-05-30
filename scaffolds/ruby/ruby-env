@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This script is used by the TCR script: /scripts/test
+
 cd $(dirname $0)
 
 ENABLE_TTY=${ENABLE_TTY:--t}
