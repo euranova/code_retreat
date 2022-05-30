@@ -1,5 +1,5 @@
-require "spec_helper"
-require "dummy"
+require_relative '../spec_helper'
+require_relative '../../lib/dummy'
 
 describe Dummy do
   it "has a dummy constant" do
