@@ -14,7 +14,7 @@ Start a bash prompt in the docker image, with the code mounted as a volume,
 using the provided script:
 
 ```bash
-./docker.sh
+./cpp-env
 ```
 
 See https://docs.docker.com/engine/installation for instructions on how to

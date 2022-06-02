@@ -7,7 +7,7 @@ This scaffold comes with severals tools that work with docker under the hood.
 
 Run
 ```bash
-./docker.sh [command]
+./php-env [command]
 ```
 to use a tool.
 
@@ -19,13 +19,13 @@ The first time you use this scaffold you need to install all dependencies.
 This is done by using the PHP dependencies manager: [composer](https://getcomposer.org/).
 The following command should install all the dependencies in the `/vendor` directory.
 ```bash
-./docker.sh composer install
+./php-env composer install
 ```
 
 Sometimes you need to update your dependencies or add a new one.
 As an example, we will add a second PHP unit test framework called: _phpunit_.
 ```bash
-./docker.sh composer require phpunit/phpunit ^6.2
+./php-env composer require phpunit/phpunit ^6.2
 ```
 
 That's it! You can now use your favorite tools!
@@ -37,18 +37,18 @@ write clean and working PHP code using behaviour driven development.
 Run the following command to execute tests:
 
 ```bash
-./docker.sh phpspec run
+./php-env phpspec run
 ```
 
 phpspec provides a tool to help you writing _specification_.
 You can use it with the `desc` subcommand:
 ```bash
-./docker.sh phpspec desc [MyNewNamespace]/[MyNewClass]
+./php-env phpspec desc [MyNewNamespace]/[MyNewClass]
 ```
 
 ## Run the app
 
 
 ```bash
-./docker.sh php app.php
+./php-env php app.php
 ```

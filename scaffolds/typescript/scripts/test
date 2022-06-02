@@ -2,6 +2,6 @@
 
 cd $(dirname $0)/..
 
-./ts-node-env npm run test
+./node-env npm run test
 
 exit $?

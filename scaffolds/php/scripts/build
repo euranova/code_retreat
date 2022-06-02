@@ -2,7 +2,6 @@
 
 cd $(dirname $0)/..
 
-find src spec -type f -name '*.php' -print0 | ENABLE_TTY=" " xargs -0 -n1 -P4 ./docker.sh php -l -n | (! grep -v "No syntax errors detected" )
+find src spec -type f -name '*.php' -print0 | ENABLE_TTY=" " xargs -0 -n1 -P4 ./php-env php -l -n | (! grep -v "No syntax errors detected" )
 
 exit $?
-
