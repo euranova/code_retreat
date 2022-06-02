@@ -2,6 +2,6 @@
 
 cd $(dirname $0)/..
 
-./docker.sh dotnet build
+./dotnet-env.sh dotnet build
 
 exit $?

@@ -2,6 +2,6 @@
 
 cd $(dirname $0)/..
 
-./docker.sh dotnet test CodeRetreat.Tests
+./dotnet-env.sh dotnet test CodeRetreat.Tests
 
 exit $?
