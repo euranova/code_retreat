@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd "$(dirname $0)" || exit 1
+
 export ENABLE_TTY=" "
 
 function run_test() {

@@ -2,6 +2,8 @@
 
 cd $(dirname $0)/..
 
+# Contributions are welcome to define what would be the equivalent of a
+# build step for Ruby.
 echo "skipping build for ruby"
 
 exit $?
