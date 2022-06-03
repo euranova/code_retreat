@@ -8,6 +8,7 @@ to facilitate [code retreat](http://coderetreat.org).
 `test && commit || revert` is a practice invented by Kent Beck.
 
 We provide scripts to use TCR with the scaffolds:
+
 * `./scripts/tcr`: the classic version.
 * `./scripts/btcr`: this script is easier to work with: build failures will **not**
   be reverted, giving you a chance to fix them.
