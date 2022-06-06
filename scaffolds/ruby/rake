@@ -1,0 +1,14 @@
+#!/bin/bash
+
+ENABLE_TTY=${ENABLE_TTY:--t}
+IMAGE="code-retreat-ruby-env"
+VERSION="2"
+TAG="$IMAGE:$VERSION"
+
+docker images | grep -q "$IMAGE[ ]*$VERSION" || docker build -t $TAG . || { echo "Failed to build image"; exit 1; }
+docker run --rm \
+    -u $(id -u):$(id -g) \
+    -v $PWD:/usr/src/app \
+    -w /usr/src/app \
+    -i ${ENABLE_TTY} \
+    $TAG rake $@

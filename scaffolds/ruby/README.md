@@ -7,11 +7,12 @@ This scaffold comes with pre-configured Docker environment.
 ### Run the tests 
 May take 1min. to build the image the 1st time.
 ```bash
-./docker.sh rake
+./rake
 ```
-Commands `irb` and `ruby` are also available (replace `rake`).
 
 ## Option 2: use a locally installed ruby environment
+TCR and BTCR scripts are not available because they use Docker.
+
 Ruby and Bundler 2+ are required.
 ### Install the dependencies
 
