@@ -1,35 +1,53 @@
 # Java Scaffold for Code Retreat
 
-## Option 1: use docker wrapper scripts
+## Option 1: use Docker wrapper scripts
 
-See `scripts/` folder.
+This scaffold comes with a pre-configured Docker environment.
 
-## Install Java and Gradle
-
-There are several options. The easiest way is to work with a docker image ready
-with all the tools you need.
-
-The only downside is that you need to run gradle through Docker. To make it easy, \
-we wrote a script `gradle` wrapping the `docker` command and acting as gradle.
-
-## Run the tests
-
-```Bash
-./gradle test
+### Run the tests
+May need to pull the image (600MB) the 1st time.
+```
+./gradle.sh test
+```
+Or, using [TCR/BTCR](https://github.com/euranova/code_retreat#tcr):
+```
+./../../scripts/[tcr|btcr]
 ```
 
-## Run the app
+### Run the app
 
-```Bash
-./gradle run
+```
+./gradle.sh run
+```
+
+## Option 2: use a locally installed Java environment
+This option allows faster Gradle runs thanks to the Gradle daemon.
+Java is required, for ex. 
+[OpenJDK 11 tar.gz](https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_bin.tar.gz).
+
+With this options, TCR/BTCR scripts will not be directly available because they use `./gradle.sh`
+(which calls Docker). If you wish to use TCR without Docker, see the comments in `./scripts/`
+sources so that it calls Gradle directly without wrapping in a Docker container.
+
+### Run the tests
+
+```
+./gradlew test
+```
+
+### Run the app
+
+```
+./gradlew run
 ```
 
 The results of the tests are reported both in the standard output and the following file `build/reports/tests/index.html`.
 
-## Clean
+### Clean
+Clears the `/build` folder.
 
-```Bash
-./gradle clean
+```
+./gradlew clean
 ```
 
 ## Hierarchy of directories

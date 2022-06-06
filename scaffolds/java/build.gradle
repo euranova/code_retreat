@@ -8,12 +8,5 @@ repositories {
 }
 
 dependencies {
-  testCompile "junit:junit:4.11"
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
 }
-
-test {
-  testLogging {
-      events "passed", "skipped", "failed", "standardOut", "standardError"
-  }
-}
-
