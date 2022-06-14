@@ -14,10 +14,10 @@ Or, using [TCR/BTCR](https://github.com/euranova/code_retreat#tcr):
 ./../../scripts/[tcr|btcr]
 ```
 ## Option 2: use a locally installed ruby environment
-With this options, TCR/BTCR scripts will not be directly available 
-because they use `./gradle.sh` (which calls Docker). 
-If you wish to use TCR without Docker, see the comments 
-in `./scripts/` sources so that it calls Gradle directly without wrapping 
+With this options, TCR/BTCR scripts will not be directly available
+because they use `./rake` (which calls Docker).
+If you wish to use TCR without Docker, see the comment
+in `./scripts/test` so that it uses Rake directly without wrapping
 in a Docker container.
 
 Ruby and Bundler 2+ are required.
