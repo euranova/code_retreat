@@ -9,9 +9,16 @@ May take 1min. to build the image the 1st time.
 ```bash
 ./rake
 ```
-
+Or, using [TCR/BTCR](https://github.com/euranova/code_retreat#tcr):
+```
+./../../scripts/[tcr|btcr]
+```
 ## Option 2: use a locally installed ruby environment
-TCR and BTCR scripts are not available because they use Docker.
+With this options, TCR/BTCR scripts will not be directly available 
+because they use `./gradle.sh` (which calls Docker). 
+If you wish to use TCR without Docker, see the comments 
+in `./scripts/` sources so that it calls Gradle directly without wrapping 
+in a Docker container.
 
 Ruby and Bundler 2+ are required.
 ### Install the dependencies

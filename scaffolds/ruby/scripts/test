@@ -2,6 +2,6 @@
 
 cd $(dirname $0)/..
 
-./rake
+./rake # or "rake" without "./" if you don't want to use Docker
 
 exit $?
