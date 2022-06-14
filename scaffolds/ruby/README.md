@@ -1,26 +1,33 @@
 # Ruby Scaffold for Code Retreat
 
-## Option 1: use docker wrapper scripts
+## Option 1: use Docker wrapper scripts
 
-This scaffold comes with severals tools that work with docker under the hood.
-- `ruby`: a ruby 3 executable
-- `bundler`: a ruby dependencies manager
-- `minitest`: a ruby test framework
+This scaffold comes with pre-configured Docker environment.
 
-Run
+### Run the tests 
+May take 1min. to build the image the 1st time.
 ```bash
-./docker.sh [irb|ruby|rake]
+./rake
 ```
+Or, using [TCR/BTCR](https://github.com/euranova/code_retreat#tcr):
+```
+./../../scripts/[tcr|btcr]
+```
+## Option 2: use a locally installed ruby environment
+With this options, TCR/BTCR scripts will not be directly available 
+because they use `./gradle.sh` (which calls Docker). 
+If you wish to use TCR without Docker, see the comments 
+in `./scripts/` sources so that it calls Gradle directly without wrapping 
+in a Docker container.
 
-See `scripts/` folder.
-
-## Install the dependencies
+Ruby and Bundler 2+ are required.
+### Install the dependencies
 
 ```Bash
-bundle install
+bundle
 ```
 
-## Run the tests
+### Run the tests
 
 ```Bash
 rake

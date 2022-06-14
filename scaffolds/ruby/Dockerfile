@@ -1,7 +1,4 @@
-FROM ruby:3.0
-
-# throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1 && gem install bundler:1.17.1
+FROM ruby:3.0-slim
 
 WORKDIR /usr/src/app
 

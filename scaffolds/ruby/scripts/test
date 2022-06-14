@@ -2,6 +2,6 @@
 
 cd $(dirname $0)/..
 
-./ruby-env "bundle install --binstubs /tmp/docker-home/bin/ && /tmp/docker-home/bin/rake"
+./rake # or "rake" without "./" if you don't want to use Docker
 
 exit $?
