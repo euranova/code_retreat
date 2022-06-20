@@ -7,6 +7,8 @@ repositories {
   mavenCentral()
 }
 
+wrapper {gradleVersion = '7.4.2'}
+
 dependencies {
   testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
 }

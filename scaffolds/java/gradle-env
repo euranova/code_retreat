@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd "$(dirname "$0")" || exit 1
+
+if [[ -f ./gradlew && -x ./gradlew  ]]; then
+  ./gradlew "$@"
+elif which gradle > /dev/null; then
+  gradle "$@"
+else
+  docker run --rm \
+    -u $(id -u):$(id -g) \
+    -v "$(pwd)":/home/gradle/project:rw \
+    -w /home/gradle/project \
+    gradle:7.4.2-jdk11-alpine gradle "$@"
+fi
