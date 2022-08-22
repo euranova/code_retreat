@@ -1,35 +1,33 @@
 # Java Scaffold for Code Retreat
 
-## Option 1: use docker wrapper scripts
+This scaffold uses a Gradle Wrapper if present, if not it uses Gradle, 
+if Gradle is not installed it runs a Docker container.
 
-See `scripts/` folder.
-
-## Install Java and Gradle
-
-There are several options. The easiest way is to work with a docker image ready
-with all the tools you need.
-
-The only downside is that you need to run gradle through Docker. To make it easy, \
-we wrote a script `gradle` wrapping the `docker` command and acting as gradle.
+It won't work with Gradle <5, to install a recent version, use
+```
+gradle wrapper
+```
 
 ## Run the tests
-
-```Bash
-./gradle test
+```
+./scripts/test
+```
+Or, using [TCR/BTCR](https://github.com/euranova/code_retreat#tcr):
+```
+./../../scripts/[tcr|btcr]
 ```
 
 ## Run the app
 
-```Bash
-./gradle run
+```
+./gradle-env run
 ```
 
-The results of the tests are reported both in the standard output and the following file `build/reports/tests/index.html`.
-
 ## Clean
+Clears the `/build` folder.
 
-```Bash
-./gradle clean
+```
+./gradlew clean
 ```
 
 ## Hierarchy of directories
