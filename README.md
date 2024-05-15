@@ -27,12 +27,6 @@ Driven Development quickly for the following programming languages:
 * [Swift](scaffolds/swift/README.md)
 * [Typescript](scaffolds/typescript/README.md)
 
-### Actor model scaffolds
-
-We also provide starting points for training exercices that rely on the
-[Actor model](https://en.wikipedia.org/wiki/Actor_model). Those can be found
-in the [`scaffolds_actor_model`](scaffolds_actor_model/) folder.
-
 ## TCR
 
 `test && commit || revert` is a practice invented by Kent Beck.
@@ -56,7 +50,6 @@ cd scaffolds/javascript
 Inspirations:
 
 * <https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864>
-* <http://5.45.106.120/tcr/index.php/2018/11/15/71/#more-71>
 
 ## Contribute to scaffolds
 
@@ -69,8 +62,8 @@ We try to follow these recommendations:
   * install the necessary dependencies,
   * build and
   * run the tests.
-* Scripts should be provided to build and test in a consistent and predictable,
-  so that it's easy for users to switch to another language location. These
+* Scripts should be provided to build and test in a consistent and predictable
+  way, so that it's easy for users to switch to another language location. These
   scripts are also expected by the TCR scripts. The scripts provided should be:
   * `./scripts/test`
   * `./scripts/build`

@@ -2,4 +2,4 @@
 
 ENABLE_TTY=${ENABLE_TTY:--t}
 
-docker run -i ${ENABLE_TTY} --rm --user ${UID} -v ${PWD}:/app euranova/cxxtest:1.1 $@
+docker run -i ${ENABLE_TTY} --rm --user ${UID} -v "${PWD}":/app euranova/cxxtest:1.1 $@
