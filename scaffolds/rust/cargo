@@ -7,6 +7,6 @@ docker  run -i ${ENABLE_TTY} --rm \
     -u $(id -u):$(id -g) \
     -e HOME=/tmp \
     -v $HOME/.cargo:/tmp/.cargo \
-    -v $PWD:/work \
+    -v "${PWD}":/work \
     -w /work \
     rust:1.30-slim cargo $@

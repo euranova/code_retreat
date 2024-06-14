@@ -21,5 +21,5 @@ Compile & run :
 
 The REPL requires a priviled container. Use this :
 ```
-docker run -it --rm --privileged -w /code -v $PWD:/code swiftdocker/swift:3.0.1 swift
+docker run -it --rm --privileged -w /code -v "${PWD}":/code swiftdocker/swift:3.0.1 swift
 ```

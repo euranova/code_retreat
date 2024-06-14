@@ -1,9 +1,0 @@
-#!/bin/bash
-
-docker run --rm \
-  -u $(id -u):$(id -g) \
-  -v $(pwd):/home/gradle/project:rw \
-  -w /home/gradle/project \
-  -it \
-  --env GRADLE_USER_HOME=".gradle" \
-  gradle:6.8.3-jdk11 gradle $@

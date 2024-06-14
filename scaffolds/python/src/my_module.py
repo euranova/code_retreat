@@ -1,4 +1,3 @@
 def my_function(x, y):
-    """Adds two numbers.
-    """
+    """ Adds two numbers. """
     return x + y

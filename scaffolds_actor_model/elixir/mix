@@ -1,7 +1,0 @@
-#!/bin/bash
-
-docker run --rm \
-  -u $(id -u):$(id -g) \
-  -v $(pwd):/tmp/project:rw \
-  -w /tmp/project \
-  elixir:1.11.4-alpine mix $@
